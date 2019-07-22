@@ -12,7 +12,7 @@
     <string name="question_3">종속성 (Dependency)</string>
     <string name="question_4">변환 (Translation)</string>
     <string name="Wrong_Algorithm">Wrong problem - Algorithm</string>
-    <string name="wrong_problem">Wrong problem - %s</string>
+    <string name="wrong_problem">%s</string>
     <string name="question">Question) %s</string>
     <string name="answer">정답 %d</string>
 

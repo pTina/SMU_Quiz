@@ -40,16 +40,11 @@ class DailyActivity : BaseActivity() {
     //choice 4가지 담을 리스트 -> 이걸로 xml파일 설정
     var choice = mutableListOf<Choice>()
 
-    /*var subject = mutableListOf<QuizSubject>(
-        QuizSubject("Database"),
-        QuizSubject("Algorighme"),
-        QuizSubject("operation_system")
-    )*/
 
     var pr_num = 0 //문제 수
     var quizSolved = false //문제풀이여부
     var wrongBoolean = false //문제정답여부
-    var bookMarkBoolean = false //문제정답여부
+    var bookMarkBoolean = false //즐겨찾기
     var correctAnswer = 0
     var subjectSelect = ArrayList<String>()
     var quiz = arrayListOf<Quiz>()
@@ -148,10 +143,11 @@ class DailyActivity : BaseActivity() {
             override fun onClick(v: View) {
                 if (bookMarkBoolean) {
                     bookMarkBoolean = false
-                    ivMainLike.setImageResource(R.drawable.like_fill)
+                    ivMainLike.setImageResource(R.drawable.like_empty)
+
                 } else {
                     bookMarkBoolean = true
-                    ivMainLike.setImageResource(R.drawable.like_empty)
+                    ivMainLike.setImageResource(R.drawable.like_fill)
                 }
             }
         })
@@ -174,11 +170,11 @@ class DailyActivity : BaseActivity() {
                             Log.d("Result", "123123:bookMarkBoolean:$wrong")
                         }, { error ->
                             error.printStackTrace()
-                            Log.d("Result", "ereerr::bookMarkBoolean")
+                            Log.d("Result", "error::bookMarkBoolean")
                         }, { Log.d("Result", "complete::bookMarkBoolean") })
 
                 }
-                if (!wrongBoolean) {
+                if (!wrongBoolean) {        //
                     val wrong = Wrong(0, quiz[0].pr_id, loadCurrentUserEmail())
                     smuDailyInterface.setWrongQuiz(wrong)
                         .subscribeOn(Schedulers.io())
@@ -187,7 +183,7 @@ class DailyActivity : BaseActivity() {
                             Log.d("Result", "123123:wrongBoolean:$wrong")
                         }, { error ->
                             error.printStackTrace()
-                            Log.d("Result", "ereerr::wrongBoolean")
+                            Log.d("Result", "error::wrongBoolean")
                         }, { Log.d("Result", "complete::wrongBoolean") })
                     //오답인경우 전체 오답++
                     saveQuizResult("wr_all",1)

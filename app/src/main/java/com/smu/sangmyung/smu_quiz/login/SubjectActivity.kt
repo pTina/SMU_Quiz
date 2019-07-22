@@ -38,6 +38,7 @@ class SubjectActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedL
             cb_database.toggle()
             cb_operation_system.toggle()
             cb_software_engineering.toggle()
+
         }
 
         cb_algorithm.setOnCheckedChangeListener { _, isChecked ->

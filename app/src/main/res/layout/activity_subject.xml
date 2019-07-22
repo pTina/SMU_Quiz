@@ -78,7 +78,7 @@
                 android:gravity="center"
                 android:textSize="18sp"
                 android:fontFamily="sans-serif"
-                android:text="Algorithm"
+                android:text="Algorithme"
                 android:textColor="@color/black0"
                 android:letterSpacing="0.05"
                 app:layout_constraintStart_toStartOf="parent"

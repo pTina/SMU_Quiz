@@ -22,6 +22,7 @@ public open class BaseActivity : AppCompatActivity() {
     var wr_daba: Int=0
     var wr_oper: Int=0
     var wr_soft: Int=0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

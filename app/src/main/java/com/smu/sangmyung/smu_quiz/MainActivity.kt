@@ -106,15 +106,15 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             subject_list.clear()
             while (subject_token.hasMoreTokens()) {
                 var token: String = subject_token.nextToken().toString()
-                if (token == "algorithm") {
+                if (token == "Algorithme") {
                     Algorithme = true
                     subject_list.add("Algorithme")
                 }
-                if (token == "database") {
+                if (token == "Database") {
                     Database = true
                     subject_list.add("Database")
                 }
-                if (token == "sofrware_engineering") {
+                if (token == "Software_Engineering") {
                     Software_Engineering = true
                     subject_list.add("Software_Engineering")
                 }
@@ -130,7 +130,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                     computer_structure = true
                     subject_list.add("computer_structure")
                 }
-                if (token == "data_structure") {
+                if (token == "Data_structure") {
                     Data_structure = true
                     subject_list.add("Data_structure")
                 }
